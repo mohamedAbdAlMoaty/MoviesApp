@@ -14,14 +14,6 @@ A Simple Android Mobile Application which has been implemented using Clean Archi
 - Room
 
 
-
-### The App Scenario
-
-Used the following REST API, develop a simple application that fetches the
-posts from the API and displays them in a list.
-The API is here: https://jsonplaceholder.typicode.com/posts
-
-
 ### Supported Android Versions
 
 android versions targeted:
