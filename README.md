@@ -37,8 +37,8 @@ android versions targeted:
 
 ## Version History
 
-* 1.0 (07/06/2019)- Initial implementation
+* 1.0 (7/07/2020)- Initial implementation
 
 
 ## Author
-@ZARA
+@Mohamed Gowid
