@@ -5,13 +5,12 @@ A Simple Android Mobile Application which has been implemented using Clean Archi
 
 ### Technologies & Methodologies which used:
 
-- Koin
+- Kotlin
 - Coroutines
 - Clean Architecture
 - MVVM Pattern
 - LiveData
-- Espresso
-- Mockk
+- Room
 
 
 ### The App Scenario
