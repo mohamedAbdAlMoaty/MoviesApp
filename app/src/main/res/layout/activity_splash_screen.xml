@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@drawable/background_splash"
+    tools:context="com.mohamed.moviesapp.ui.SplashScreen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_weight="0.4"
+        android:src="@drawable/ic_local_movies_black_24dp"
+        android:layout_height="0dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/movie_app"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:layout_weight="0.4"
+        android:layout_height="0dp" />
+</LinearLayout>

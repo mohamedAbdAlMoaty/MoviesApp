@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="Title_bar">Lists Of Movies</string>
+    <string name="title_dialog">There is no connection</string>
+    <string name="message_dialog">Are you want to reload old data</string>
+    <string name="vote_rate">Vote Rate</string>
+    <string name="movie_app">Movies Box</string>
+    <string name="title">title</string>
+</resources>
