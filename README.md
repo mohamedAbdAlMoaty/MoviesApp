@@ -41,4 +41,4 @@ android versions targeted:
 
 
 ## Author
-@Mohamed Gowid
+Mohamed Gowid
