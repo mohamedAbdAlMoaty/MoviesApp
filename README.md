@@ -7,11 +7,12 @@ A Simple Android Mobile Application which has been implemented using Clean Archi
 
 - Kotlin
 - Coroutines
+- The Single Source of Truth (SSOT) principle
 - Clean Architecture
 - MVVM Pattern
 - LiveData
 - Room
-- The Single Source of Truth (SSOT) principle
+
 
 
 ### The App Scenario
