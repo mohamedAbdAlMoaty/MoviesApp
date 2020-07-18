@@ -25,7 +25,7 @@ The API is here: https://jsonplaceholder.typicode.com/posts
 
 android versions targeted:
 
-- Android 4.0.3 Ice Cream Sandwich(API level 15) or higher
+- (API level 26) or higher
 
 
 ### Used libraries
