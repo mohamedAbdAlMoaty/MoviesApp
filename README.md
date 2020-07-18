@@ -11,6 +11,7 @@ A Simple Android Mobile Application which has been implemented using Clean Archi
 - MVVM Pattern
 - LiveData
 - Room
+- The Single Source of Truth (SSOT) principle
 
 
 ### The App Scenario
