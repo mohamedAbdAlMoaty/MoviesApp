@@ -28,6 +28,15 @@ android versions targeted:
 - (API level 26) or higher
 
 
+### Libraries
+- AndroidX Support Library
+- AndroidX Architecture Components(Room, ViewModels, LiveData)
+- AndroidX Data Binding
+- RxJava2
+- Dagger2
+- Retrofit2
+
+
 ### Used libraries
 
 1. [GitHub](http://square.github.io/retrofit/) - retrofit
