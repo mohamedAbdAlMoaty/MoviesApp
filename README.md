@@ -23,10 +23,10 @@ android versions targeted:
 ### Libraries
 - AndroidX Support Library
 - AndroidX Architecture Components(Room, ViewModels, LiveData)
-- AndroidX Data Binding
-- RxJava2
-- Dagger2
+- Glide
 - Retrofit2
+- OkHttp
+- YouTube API
 
 
 ## Author
