@@ -29,10 +29,5 @@ android versions targeted:
 - Retrofit2
 
 
-### Used libraries
-
-1. [GitHub](http://square.github.io/retrofit/) - retrofit
-
-
 ## Author
 Mohamed Gowid
