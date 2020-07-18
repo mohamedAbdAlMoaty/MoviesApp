@@ -35,10 +35,5 @@ android versions targeted:
 3. [Github](https://github.com/casidiablo/multidex) - Multidex
 
 
-## Version History
-
-* 1.0 (7/07/2020)- Initial implementation
-
-
 ## Author
 Mohamed Gowid
