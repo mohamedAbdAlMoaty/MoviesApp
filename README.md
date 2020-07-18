@@ -1,25 +1,44 @@
-Simple app that shows how to architect an android app in a clean architecture with kotlin coroutines. It simply shows a list of photo that is fetched from unsplash api image
+# Android-Clean-Arch-Coroutines-Koin
 
-Libraries
-Android Jetpack
-DataBinding Declaratively bind observable data to UI elements.
+A Simple Android Mobile Application which has been implemented using Clean Architecture alongside MVVM design.
 
-Lifecycle Create a UI that automatically responds to lifecycle events.
 
-LiveData Build data objects that notify views when the underlying database changes.
+### Technologies & Methodologies which used:
 
-ViewModel Store UI-related data that isn't destroyed on app rotations. Easily schedule asynchronous tasks for optimal execution.
+- Koin
+- Coroutines
+- Clean Architecture
+- MVVM Pattern
+- LiveData
+- Espresso
+- Mockk
 
-Image
-Glide An image loading and caching library for Android focused on smooth scrolling.
-HTTP
-Retrofit2 Type-safe HTTP client for Android and Java by Square, Inc.
 
-OkHttp An HTTP+HTTP/2 client for Android and Java applications.
+### The App Scenario
 
-Coroutines
-Kotlin Coroutines Coroutines is a rich library for coroutines developed by JetBrains. It contains a number of high-level coroutine-enabled primitives that this guide covers, including launch, async and others.
-DI
-Koin A pragmatic lightweight dependency injection framework for Kotlin developers.
-TODO
-Implement data caching
+Used the following REST API, develop a simple application that fetches the
+posts from the API and displays them in a list.
+The API is here: https://jsonplaceholder.typicode.com/posts
+
+
+### Supported Android Versions
+
+android versions targeted:
+
+- Android 4.0.3 Ice Cream Sandwich(API level 15) or higher
+
+
+### Used libraries
+
+1. [GitHub](http://square.github.io/retrofit/) - retrofit
+2. [GitHub](https://github.com/square/moshi) - moshi
+3. [Github](https://github.com/casidiablo/multidex) - Multidex
+
+
+## Version History
+
+* 1.0 (07/06/2019)- Initial implementation
+
+
+## Author
+@ZARA
