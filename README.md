@@ -7,7 +7,7 @@ A Simple Android Mobile Application which has been implemented using Clean Archi
 
 - Kotlin
 - Coroutines
-- Ofline - The Single Source of Truth (SSOT) principle
+- Offline - The Single Source of Truth (SSOT) principle
 - Clean Architecture
 - MVVM Pattern
 - Repository pattern
