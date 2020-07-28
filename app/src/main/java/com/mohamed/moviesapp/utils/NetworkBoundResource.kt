@@ -1,18 +1,13 @@
-package com.mohamed.moviesapp.Utils
+package com.mohamed.moviesapp.utils
 
-import android.util.Log
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.Observer
-import com.mohamed.moviesapp.Remote.ApiEmptyResponse
-import com.mohamed.moviesapp.Remote.ApiErrorResponse
-import com.mohamed.moviesapp.Remote.ApiResponse
-import com.mohamed.moviesapp.Remote.ApiSuccessResponse
-import kotlinx.coroutines.*
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.Dispatchers.Main
+import com.mohamed.moviesapp.remote.ApiEmptyResponse
+import com.mohamed.moviesapp.remote.ApiErrorResponse
+import com.mohamed.moviesapp.remote.ApiResponse
+import com.mohamed.moviesapp.remote.ApiSuccessResponse
 
 //https://proandroiddev.com/building-modern-apps-using-the-android-architecture-guidelines-3238fff96f14
 

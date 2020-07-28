@@ -2,7 +2,6 @@ package com.mohamed.moviesapp.adapters
 
 import android.content.Context
 import android.content.Intent
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,11 +10,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.RequestBuilder
-import com.bumptech.glide.util.ViewPreloadSizeProvider
 import com.mohamed.moviesapp.R
 import com.mohamed.moviesapp.models.Movie
-import com.mohamed.moviesapp.ui.SpecialMovie
+import com.mohamed.moviesapp.ui.SpecialMovieActivity
 import java.util.*
 
 class MovieAdapter (var context: Context) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>(){
@@ -35,7 +32,7 @@ class MovieAdapter (var context: Context) : RecyclerView.Adapter<MovieAdapter.Mo
         holder.moviename.setText(grp[position].title)
 
         holder.itemView.setOnClickListener(View.OnClickListener {
-            val intent = Intent(context, SpecialMovie::class.java)
+            val intent = Intent(context, SpecialMovieActivity::class.java)
             intent.putExtra("arr", grp[position])
             context.startActivity(intent)
         })

@@ -1,4 +1,4 @@
-package com.mohamed.moviesapp.Utils
+package com.mohamed.moviesapp.utils
 //https://github.com/android/architecture-components-samples/blob/master/GithubBrowserSample/app/src/main/java/com/android/example/github/vo/Resource.kt
 /**
  * A generic class that holds a value with its loading status.

@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion 29
@@ -27,6 +28,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 
 }
 
@@ -43,7 +47,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
     //LifecycleScope
-    def arch_version = '2.3.0-alpha05'
+    def arch_version = '2.3.0-alpha06'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$arch_version"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
@@ -62,12 +66,22 @@ dependencies {
     //cardview
     implementation 'androidx.cardview:cardview:1.0.0'
     // Room
-    implementation 'android.arch.persistence.room:runtime:1.1.1'
-    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
-    kapt "android.arch.persistence.room:compiler:1.1.1"
-    kapt "android.arch.lifecycle:compiler:1.1.1"
+    def room_version = "2.2.5"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
     //youtube
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //dagger
+    implementation "com.google.dagger:hilt-android:2.28-alpha"
+    kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
+    def hilt_viewmodels = "1.0.0-alpha01"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodels"
+    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodels"
+    def fragment_ktx = "1.2.5"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx"
+    //glide
     implementation 'com.github.bumptech.glide:glide:4.2.0'
     // annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
     implementation('com.github.bumptech.glide:recyclerview-integration:4.2.0') {
@@ -75,4 +89,9 @@ dependencies {
         transitive = false
     }
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+
+}
+kapt {
+    correctErrorTypes true
 }

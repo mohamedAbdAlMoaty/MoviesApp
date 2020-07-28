@@ -1,7 +1,7 @@
-package com.mohamed.moviesapp.Utils
+package com.mohamed.moviesapp.utils
 
 import androidx.lifecycle.LiveData
-import com.mohamed.moviesapp.Remote.ApiResponse
+import com.mohamed.moviesapp.remote.ApiResponse
 import retrofit2.CallAdapter
 import retrofit2.Retrofit
 import java.lang.reflect.ParameterizedType

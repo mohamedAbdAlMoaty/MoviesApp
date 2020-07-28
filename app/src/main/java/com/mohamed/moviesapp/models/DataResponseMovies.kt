@@ -6,4 +6,5 @@ data class DataResponseMovies(
 
     @SerializedName("results")
     val results : List<Movie>
+
 )

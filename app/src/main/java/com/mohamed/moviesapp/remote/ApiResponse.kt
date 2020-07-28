@@ -1,4 +1,4 @@
-package com.mohamed.moviesapp.Remote
+package com.mohamed.moviesapp.remote
 
 import retrofit2.Response
 

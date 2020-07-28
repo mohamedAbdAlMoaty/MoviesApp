@@ -1,33 +1,27 @@
 package com.mohamed.moviesapp.repositories
 
-import android.content.Context
 import androidx.lifecycle.LiveData
-import com.mohamed.moviesapp.Remote.ApiResponse
-import com.mohamed.moviesapp.Remote.MoviesClient
-import com.mohamed.moviesapp.Utils.AppExecutors
-import com.mohamed.moviesapp.Utils.Constaints
-import com.mohamed.moviesapp.Utils.NetworkBoundResource
-import com.mohamed.moviesapp.Utils.Resource
+import com.mohamed.moviesapp.remote.ApiResponse
+import com.mohamed.moviesapp.utils.AppExecutors
+import com.mohamed.moviesapp.utils.NetworkBoundResource
+import com.mohamed.moviesapp.utils.Resource
 import com.mohamed.moviesapp.models.DataResponseMovies
+import com.mohamed.moviesapp.models.DataResponseYouTube
 import com.mohamed.moviesapp.models.Movie
 import com.mohamed.moviesapp.persistence.MovieDao
-import com.mohamed.moviesapp.persistence.MovieDatabase
+import com.mohamed.moviesapp.remote.MovieInterface
+import retrofit2.Response
+import javax.inject.Inject
 
-class MoviesRepository(context: Context) {
-
-    private val movietDao: MovieDao
-
-    init {
-        movietDao = MovieDatabase.getDatabase(context)!!.movieDao()
-    }
+class MoviesRepository@Inject constructor(private val movieInterface: MovieInterface, private val movieDao: MovieDao){
 
 
         fun getMovies(): LiveData<Resource<List<Movie>>> {
 
             return object : NetworkBoundResource<List<Movie>, DataResponseMovies>(AppExecutors) {
                 override fun saveCallResult(item: DataResponseMovies) {
-                    movietDao.deleteAllRows()
-                    movietDao.insertRow(item.results)
+                    movieDao.deleteAllRows()
+                    movieDao.insertRow(item.results)
                 }
 
                 override fun shouldFetch(data: List<Movie>): Boolean {
@@ -35,14 +29,17 @@ class MoviesRepository(context: Context) {
                 }
 
                 override fun loadFromDb(): LiveData<List<Movie>> {
-                    return movietDao.getAllRows()
+                    return movieDao.getAllRows()
                 }
 
                 override fun createCall(): LiveData<ApiResponse<DataResponseMovies>> {
-                    val baseUrl = Constaints.BASE_URL + "discover/"
-                    return MoviesClient.apiService(baseUrl).getMovies()
+                    return movieInterface.getMovies()
                 }
             }.asLiveData()
         }
+
+    suspend fun getYoutubeMovie(id:Int): Response<DataResponseYouTube> {
+       return movieInterface.getmovie(id)
+    }
 
 }

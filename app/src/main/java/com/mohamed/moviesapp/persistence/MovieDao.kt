@@ -19,4 +19,5 @@ interface MovieDao {
 
     @Query("DELETE FROM movies")
     fun deleteAllRows()
+
 }

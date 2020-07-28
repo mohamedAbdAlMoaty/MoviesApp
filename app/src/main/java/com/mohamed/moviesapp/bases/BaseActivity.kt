@@ -1,4 +1,4 @@
-package com.mohamed.moviesapp.Bases
+package com.mohamed.moviesapp.bases
 
 import android.app.AlertDialog
 import android.content.DialogInterface

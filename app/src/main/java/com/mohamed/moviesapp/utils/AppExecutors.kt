@@ -1,4 +1,4 @@
-package com.mohamed.moviesapp.Utils
+package com.mohamed.moviesapp.utils
 
 import android.os.Handler
 import android.os.Looper

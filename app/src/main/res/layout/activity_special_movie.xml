@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:background="@color/gray"
-    tools:context="com.mohamed.moviesapp.ui.SpecialMovie">
+    tools:context="com.mohamed.moviesapp.ui.SpecialMovieActivity">
 
 
     <LinearLayout
@@ -15,10 +15,13 @@
         android:layout_height="wrap_content">
 
 
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="match_parent"
+        <fragment
             android:id="@+id/player"
-            android:layout_height="280dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment">
+        </fragment>
+
 
         <TextView
             android:layout_width="match_parent"
