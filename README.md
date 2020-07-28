@@ -11,6 +11,7 @@ A Simple Android Mobile Application which has been implemented using Clean Archi
 - Clean Architecture
 - MVVM Pattern
 - Repository pattern
+- Dependency Injection pattern
 
 
 ### Supported Android Versions
@@ -23,6 +24,7 @@ android versions targeted:
 ### Libraries
 - AndroidX Support Library
 - AndroidX Architecture Components(Room, ViewModels, LiveData)
+- Dagger Hilt
 - Glide
 - Gson
 - Retrofit2
